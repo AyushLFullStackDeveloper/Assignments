@@ -23,7 +23,7 @@
             <input type="text" id="js-input" placeholder="Your name" />
             <button onclick="jsSubmit()">Submit</button>
         </div>
-
+        
         <div>
             <p>Output:</p>
             <div class="output" id="js-output"></div>
@@ -32,12 +32,24 @@
         <div class="language-code">
             <pre>
 // JavaScript for the interactive input and output
+
 function jsSubmit(){
     let x = document.getElementById("js-input").value;
     document.getElementById("js-output").innerHTML = "Hello, " + x + "!";
     console.log("Hello, " + x + "!");
     alert("Hello, " + x + "!");
 }
+
+// JavaScript for direct assignment
+
+let name = "Ayush Lolusare";
+console.log("Hello, " + name);
+alert("Hello, " + name);
+document.getElementById("js-output").innerHTML = "Hello, " + x + "!";
+
+// JavaScript for Prompt and Alert
+let name = prompt("Enter your name:");
+alert("Hello, " + name + "!");
             </pre>
         </div>
     </div>
