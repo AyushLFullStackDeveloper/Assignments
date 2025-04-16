@@ -111,7 +111,6 @@ let name = "Mahi"
 let age = 21
 
 print("Hi \(name), you are \(age) years old.")
-
                     </pre>
                 </div>
                 <div class="output-section">
@@ -145,14 +144,13 @@ int main() {
 // Direct Assign
 #include <stdio.h>
 
-    int main() {
-        char name[50] = "Mahi";
-        int age = 21;
+int main() {
+    char name[50] = "Mahi";
+    int age = 21;
     
-        printf("Hi %s, you are %d years old.\n", name, age);
-        return 0;
-    }
-    
+    printf("Hi %s, you are %d years old.\n", name, age);
+    return 0;
+}
                     </pre>
                 </div>
                 <div class="output-section">
@@ -166,37 +164,75 @@ Hi Ayush, you are 19 years old.</pre>
 
         <!-- JavaScript Tab -->
         <div id="js" class="tab-content">
+            <h2>JavaScript Input/Output Examples</h2>
+            
+            <!-- Method 1: HTML Form Input & Output -->
             <div class="code-output-container">
                 <div class="code-section">
-                    <h3>Code <span class="language-badge c-badge">JavaScript</span></h3>
+                    <h3>HTML Form Input <span class="language-badge js-badge">JavaScript</span></h3>
                     <pre>
-// JS I/O by User Input
-
+// JavaScript for HTML form input and output
 function jsSubmit() {
-    let x = document.getElementById("js-input").value;
-    document.getElementById("js-output").innerHTML = "Hello, " + x + "!";
+    let name = document.getElementById("js-input").value;
+    document.getElementById("js-output").innerHTML = "Hello, " + name + "!";
+    console.log("Hello, " + name + "!");
 }
-
-// JS I/O by Direct Assign
-
-let name = "Ayush Lolusare";
-console.log("Hello, " + name);
-
-// JS I/O by Prompt and Alert
-
-let name = prompt("Enter your name:");
-alert("Hello, " + name + "!");
                     </pre>
+                    <div class="input-area">
+                        <label for="js-input">Enter your name:</label>
+                        <input type="text" id="js-input" placeholder="Your name" />
+                        <button class="submit-btn" onclick="jsSubmit()">Submit</button>
+                    </div>
                 </div>
                 <div class="output-section">
                     <h3>Output</h3>
-                    <pre class="output-text">
-<h1>Your live output is displayed here. ↓</h1>
-<form action="./javascript.html">
-<button class="submit-btn">Click Here</button>
-</form>
-<p id="js-output"></p>
+                    <div class="output-display" id="js-output">Output will appear here</div>
+                </div>
+            </div>
+            
+            <!-- Method 2: Prompt & Alert -->
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Prompt Input & Alert Output <span class="language-badge js-badge">JavaScript</span></h3>
+                    <pre>
+// JavaScript for prompt input and alert output
+function promptAlert() {
+    let name = prompt("Enter your name:");
+    if (name) {
+        alert("Hello, " + name + "!");
+        document.getElementById("prompt-output").innerHTML = "Hello, " + name + "!";
+    }
+}
                     </pre>
+                    <div class="input-area">
+                        <button class="submit-btn" onclick="promptAlert()">Try Prompt & Alert</button>
+                    </div>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <div class="output-display" id="prompt-output">Output shows in an alert dialog</div>
+                </div>
+            </div>
+            
+            <!-- Method 3: Direct Assignment -->
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Direct Assignment <span class="language-badge js-badge">JavaScript</span></h3>
+                    <pre>
+// JavaScript for direct assignment
+function directAssignment() {
+    let name = "Ayush Lolusare";
+    console.log("Hello, " + name + "!");
+    document.getElementById("direct-output").innerHTML = "Hello, " + name + "!";
+}
+                    </pre>
+                    <div class="input-area">
+                        <button class="submit-btn" onclick="directAssignment()">Try Direct Assignment</button>
+                    </div>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <div class="output-display" id="direct-output">Output will appear here</div>
                 </div>
             </div>
         </div>
