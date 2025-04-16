@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programming Languages I/O Demo</title>
     <link rel="stylesheet" href="./index.css">
+    <!-- Add highlight.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/vs2015.min.css">
 </head>
 <body>
     <div class="container">
@@ -26,7 +28,7 @@
             <div class="code-output-container">
                 <div class="code-section">
                     <h3>Code <span class="language-badge java-badge">Java</span></h3>
-                    <pre>
+                    <pre><code class="language-java">
 import java.util.Scanner;
 
 public class BasicIO {
@@ -49,7 +51,7 @@ public class BasicIO {
         System.out.println("Hi " + name + ", you are " + age + " years old.");
     }
 }
-                    </pre>
+                    </code></pre>
                 </div>
                 <div class="output-section">
                     <h3>Output</h3>
@@ -65,7 +67,7 @@ Hi Ayush Lolusare, you are 19 years old.</pre>
             <div class="code-output-container">
                 <div class="code-section">
                     <h3>Code <span class="language-badge python-badge">Python</span></h3>
-                    <pre>
+                    <pre><code class="language-python">
 # Basic Input/Output in Python
 
 name = input("Enter your name: ")
@@ -78,7 +80,7 @@ name = "Ayush Lolusare"
 age = 19
 print(f"Hello, {name}!")
 print(f"You are {age} years old.")
-                    </pre>
+                    </code></pre>
                 </div>
                 <div class="output-section">
                     <h3>Output</h3>
@@ -95,7 +97,7 @@ You are 19 years old.</pre>
             <div class="code-output-container">
                 <div class="code-section">
                     <h3>Code <span class="language-badge swift-badge">Swift</span></h3>
-                    <pre>
+                    <pre><code class="language-swift">
 import Foundation
 
 print("Name: ", terminator: "")
@@ -111,7 +113,7 @@ let name = "Mahi"
 let age = 21
 
 print("Hi \(name), you are \(age) years old.")
-                    </pre>
+                    </code></pre>
                 </div>
                 <div class="output-section">
                     <h3>Output</h3>
@@ -127,8 +129,8 @@ Hi Ayush Lolusare, you are 19 years old.</pre>
             <div class="code-output-container">
                 <div class="code-section">
                     <h3>Code <span class="language-badge c-badge">C</span></h3>
-                    <pre>
-#include <stdio.h>
+                    <pre><code class="language-c">
+#include &lt;stdio.h&gt;
 
 int main() {
     char name[50];
@@ -142,7 +144,7 @@ int main() {
 }
 
 // Direct Assign
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
     char name[50] = "Mahi";
@@ -151,7 +153,7 @@ int main() {
     printf("Hi %s, you are %d years old.\n", name, age);
     return 0;
 }
-                    </pre>
+                    </code></pre>
                 </div>
                 <div class="output-section">
                     <h3>Output</h3>
@@ -170,14 +172,14 @@ Hi Ayush, you are 19 years old.</pre>
             <div class="code-output-container">
                 <div class="code-section">
                     <h3>HTML Form Input <span class="language-badge js-badge">JavaScript</span></h3>
-                    <pre>
+                    <pre><code class="language-javascript">
 // JavaScript for HTML form input and output
 function jsSubmit() {
     let name = document.getElementById("js-input").value;
     document.getElementById("js-output").innerHTML = "Hello, " + name + "!";
     console.log("Hello, " + name + "!");
 }
-                    </pre>
+                    </code></pre>
                     <div class="input-area">
                         <label for="js-input">Enter your name:</label>
                         <input type="text" id="js-input" placeholder="Your name" />
@@ -194,7 +196,7 @@ function jsSubmit() {
             <div class="code-output-container">
                 <div class="code-section">
                     <h3>Prompt Input & Alert Output <span class="language-badge js-badge">JavaScript</span></h3>
-                    <pre>
+                    <pre><code class="language-javascript">
 // JavaScript for prompt input and alert output
 function promptAlert() {
     let name = prompt("Enter your name:");
@@ -203,7 +205,7 @@ function promptAlert() {
         document.getElementById("prompt-output").innerHTML = "Hello, " + name + "!";
     }
 }
-                    </pre>
+                    </code></pre>
                     <div class="input-area">
                         <button class="submit-btn" onclick="promptAlert()">Try Prompt & Alert</button>
                     </div>
@@ -218,14 +220,14 @@ function promptAlert() {
             <div class="code-output-container">
                 <div class="code-section">
                     <h3>Direct Assignment <span class="language-badge js-badge">JavaScript</span></h3>
-                    <pre>
+                    <pre><code class="language-javascript">
 // JavaScript for direct assignment
 function directAssignment() {
     let name = "Ayush Lolusare";
     console.log("Hello, " + name + "!");
     document.getElementById("direct-output").innerHTML = "Hello, " + name + "!";
 }
-                    </pre>
+                    </code></pre>
                     <div class="input-area">
                         <button class="submit-btn" onclick="directAssignment()">Try Direct Assignment</button>
                     </div>
@@ -237,6 +239,15 @@ function directAssignment() {
             </div>
         </div>
     </div>
+    
+    <!-- Add highlight.js script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <!-- Add language packs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/swift.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/javascript.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

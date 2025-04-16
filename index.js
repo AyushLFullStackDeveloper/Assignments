@@ -18,6 +18,9 @@ function openTab(evt, tabName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).classList.add("active");
     evt.currentTarget.classList.add("active");
+    
+    // Re-initialize syntax highlighting for the new tab
+    hljs.highlightAll();
 }
 
 function jsSubmit() {
@@ -45,4 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Make sure Java tab is active at start
     document.getElementById('java').classList.add('active');
     document.querySelector('.tab-btn').classList.add('active');
+    
+    // Initialize highlight.js
+    hljs.highlightAll();
 });
