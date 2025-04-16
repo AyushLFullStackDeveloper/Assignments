@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages I/O Demo</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Input/Output in Programming Languages</h1>
+            <p>Comparing how different languages handle basic I/O operations</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'java')">Java</button>
+            <button class="tab-btn" onclick="openTab(event, 'python')">Python</button>
+            <button class="tab-btn" onclick="openTab(event, 'swift')">Swift</button>
+            <button class="tab-btn" onclick="openTab(event, 'c')">C</button>
+            <button class="tab-btn" onclick="openTab(event, 'js')">JavaScript</button>
+        </div>
+
+        <!-- Java Tab -->
+        <div id="java" class="tab-content active">
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Code <span class="language-badge java-badge">Java</span></h3>
+                    <pre>
+import java.util.Scanner;
+
+public class BasicIO {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Name: ");
+        String name = input.nextLine();
+        System.out.print("Age: ");
+        int age = input.nextInt();
+        System.out.println("Hi " + name + ", you are " + age + " years old.");
+        input.close();
+    }
+}
+
+// Direct Assign
+public class BasicIO {
+    public static void main(String[] args) {
+        String name = "Ayush Lolusare";
+        int age = 19;
+        System.out.println("Hi " + name + ", you are " + age + " years old.");
+    }
+}
+                    </pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre class="output-text">Enter your name: Ayush Lolusare
+Enter your age: 19
+Hi Ayush Lolusare, you are 19 years old.</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Python Tab -->
+        <div id="python" class="tab-content">
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Code <span class="language-badge python-badge">Python</span></h3>
+                    <pre>
+# Basic Input/Output in Python
+
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+print(f"Hello, {name}!")
+print(f"You are {age} years old.")
+
+# Direct Assign
+name = "Ayush Lolusare"
+age = 19
+print(f"Hello, {name}!")
+print(f"You are {age} years old.")
+                    </pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre class="output-text">Enter your name: Ayush Lolusare
+Enter your age: 19
+Hello, Ayush Lolusare!
+You are 19 years old.</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swift Tab -->
+        <div id="swift" class="tab-content">
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Code <span class="language-badge swift-badge">Swift</span></h3>
+                    <pre>
+import Foundation
+
+print("Name: ", terminator: "")
+let name = readLine() ?? ""
+print("Age: ", terminator: "")
+let age = Int(readLine() ?? "") ?? 0
+print("Hi \(name), you are \(age) years old.")
+
+// Direct Assign
+import Foundation
+
+let name = "Mahi"
+let age = 21
+
+print("Hi \(name), you are \(age) years old.")
+
+                    </pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre class="output-text">Enter your name: Ayush Lolusare
+Enter your age: 19
+Hi Ayush Lolusare, you are 19 years old.</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- C Tab -->
+        <div id="c" class="tab-content">
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Code <span class="language-badge c-badge">C</span></h3>
+                    <pre>
+#include <stdio.h>
+
+int main() {
+    char name[50];
+    int age;
+    printf("Name: ");
+    scanf("%s", name);
+    printf("Age: ");
+    scanf("%d", &age);
+    printf("Hi %s, you are %d years old.\n", name, age);
+    return 0;
+}
+
+// Direct Assign
+#include <stdio.h>
+
+    int main() {
+        char name[50] = "Mahi";
+        int age = 21;
+    
+        printf("Hi %s, you are %d years old.\n", name, age);
+        return 0;
+    }
+    
+                    </pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre class="output-text">Enter your name: Ayush
+Enter your age: 19
+Hi Ayush, you are 19 years old.</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript Tab -->
+        <div id="js" class="tab-content">
+            <div class="code-output-container">
+                <div class="code-section">
+                    <h3>Code <span class="language-badge c-badge">JavaScript</span></h3>
+                    <pre>
+// JS I/O by User Input
+function jsSubmit() {
+    let x = document.getElementById("js-input").value;
+    document.getElementById("js-output").innerHTML = "Hello, " + x + "!";
+}
+
+// JS I/O by Direct Assign
+let name = "Ayush Lolusare";
+console.log("Hello, " + name);
+                    </pre>
+                </div>
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <pre class="output-text">
+<h1>Your live output is displayed here. ↓</h1>
+<form action="./javascript.html">
+<button class="submit-btn">Click Here</button>
+</form>
+<p id="js-output"></p>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

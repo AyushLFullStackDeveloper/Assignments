@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input/Output Examples</title>
+    <link rel="stylesheet" href="./javascript.css" />
+</head>
+
+<body>
+    <h1>Input/Output Examples in JavaScript</h1>
+
+    <div class="demo-section">
+        <h2>JavaScript</h2>
+        <p>
+            This example shows how to take user input and produce output using
+            JavaScript with HTML.
+        </p>
+
+        <div class="input-form">
+            <label for="js-input">Enter your name:</label>
+            <input type="text" id="js-input" placeholder="Your name" />
+            <button onclick="jsSubmit()">Submit</button>
+        </div>
+
+        <div>
+            <p>Output:</p>
+            <div class="output" id="js-output"></div>
+        </div>
+
+        <div class="language-code">
+            <pre>
+// JavaScript for the interactive input and output
+function jsSubmit(){
+    let x = document.getElementById("js-input").value;
+    document.getElementById("js-output").innerHTML = "Hello, " + x + "!";
+    console.log("Hello, " + x + "!");
+    alert("Hello, " + x + "!");
+}
+            </pre>
+        </div>
+    </div>
+
+    <script src="./javascript.js"></script>
+</body>
+
+</html>
